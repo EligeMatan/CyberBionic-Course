@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1(4)</title>
+</head>
+<body>
+    <h2>Завдання 1(4)</h2>
+    <pre>
+        Уявіть, що ви розробляєте сценарій, який використовуватиметься для каталогу товарів в інтернет магазині.
+        Завдання сценарію, розрахувати яка має бути ширина блоку з описом товару, щоб в один рядок помістилося
+        певну кількість товарів. Отримане значення ширини одного блоку відобразіть у консолі.
+    </pre>
+    <script>
+        let screenWidth = 1980; // ширина екрану
+        let margins = 10; // відступи між блоками з описом товару
+        let desieredBlockCount = 5; // кількість блоків з описом, які мають відобразитися в один рядок
+
+        let width = null; // розрахуйте ширину блоку та запишіть у цю змінну
+
+        /* 1 варіант - не зовсім правильна формула ... */
+        // let blockWidth = screenWidth / desieredBlockCount - 2 * margins;      // screenWidth = (blockWidth + 2 * margins) * desieredBlockCount
+
+        /* 2 варіант - відповідь сходиться */
+        let blockWidth = (screenWidth - (desieredBlockCount - 1) * margins) / desieredBlockCount;
+        console.log('ширина блоку з описом товару:  ', blockWidth);
+    </script>
+</body>
+</html>
+

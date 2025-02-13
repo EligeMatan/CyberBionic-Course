@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1(3)</title>
+</head>
+<body>
+    <h2>Завдання 1(3)</h2>
+    <pre>
+        1) запитайте у користувача скільки він хоче купити одиниць товару
+        2) виведіть на екран яку суму повинен внести користувач з урахуванням кількості одиниць, що купуються
+        3) виведіть на екран скільки одиниць товару залишиться на складі після покупки
+    </pre>
+
+    <script>
+        let productPrice = 101.5; // ціна товару
+        let productQuantity = 50;  // кількість одиниць товару на складі
+        let inputQuantyty = +prompt('Введіть кількість товару для покупки:', 0);
+        
+        let diffQuantyty = productQuantity - inputQuantyty;     // різниця між бажаннями користувача і можливостями складу :)
+
+        let outputStr = (diffQuantyty < 0) ? `На жаль у нас тільки ${productQuantity} одиниць товару...` : `Дякую за покупку! З Вас ${productPrice * inputQuantyty} грн`
+        alert(outputStr);
+
+        alert(`На складі залишилося ${diffQuantyty} одиниць товару`)
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простий калькулятор 2</title>
+</head>
+
+<body>
+    <script>
+        let inputX = prompt("Введіть перше число", 0);
+        let operation = prompt('Введіть операцію (+, -, *, /)', '+');
+        let inputY = prompt("Введіть друге число", 0);
+
+        let x = Number(inputX);
+        let y = Number(inputY);
+
+        let result = (operation === '+') ? x + y
+        : ((operation === '-') ? x - y
+        : ((operation === '*') ? x * y
+        : ((operation === '/') ? x / y
+        :  'Упс...')));
+
+        alert(`${x} ${operation} ${y} = ` + result);
+    </script>
+</body>
+
+</html>
