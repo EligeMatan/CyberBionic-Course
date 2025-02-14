@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1</title>
+    <title>Завдання 3(1)</title>
 </head>
 <body>
     <pre>
@@ -12,6 +12,21 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        let minValue = Math.min(...values);
+        let maxValue = Math.max(...values);
+        
+        let sum = 0;
+        for (let i = 0; i < values.length; i ++) {
+            sum += values[i];
+        }
+
+        console.table(
+            {
+                'Мінімальне значення': minValue,
+                'Максимальне значення': maxValue,
+                'Сума елементів': sum
+            }
+        )
     </script>
 </body>
 </html>

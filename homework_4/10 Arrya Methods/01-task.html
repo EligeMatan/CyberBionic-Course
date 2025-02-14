@@ -14,6 +14,13 @@
     </pre>
     <script>
         let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+
+        let userCity = prompt('Введіть назву міста');
+
+        let findIndex = cities.indexOf(userCity)
+        if (findIndex !== -1) {
+            cities.slice(findIndex, findIndex);
+        }
     </script>
 </body>
 </html>

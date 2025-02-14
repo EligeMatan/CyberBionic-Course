@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 4</title>
+    <title>Завдання 3(4)</title>
 </head>
 <body>
     <pre>
@@ -14,6 +14,20 @@
     </pre>
     <script>
         let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+
+        let oddValues = [];
+        let evenValues = [];
+
+        for (let i = 0; i < values.length; i ++) {
+            if (values[i] % 2) {
+                oddValues.push(values[i]);
+            } else {
+                evenValues.push(values[i]);
+            }
+        }
+
+        console.log('Масив непарних чисел', oddValues);
+        console.log('Масив парних чисел', evenValues)
     </script>
 </body>
 </html>

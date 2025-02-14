@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        За допомогою prompt попросіть користувача ввести пропозицію. Виведіть на екран кількість слів у цій пропозиції.
+    </pre>
+    <script>
+        let str = prompt('Введіть пропозицію:');
+
+        // let arr = str.split(' ');
+        let arr = str.split(/[\s,.!?]+/).filter(Boolean);
+
+        console.log(arr.length);
+    </script>
+</body>
+</html>

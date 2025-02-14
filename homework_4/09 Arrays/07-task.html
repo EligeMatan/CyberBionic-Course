@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 7</title>
+    <title>Завдання 3(7)</title>
 </head>
 <body>
     <pre>
@@ -13,7 +13,21 @@
     </pre>
     <script>
         let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
+        // console.log(values);
         
+        let sum = 0;
+        for (item of values) {
+            sum += item;
+        }
+
+        let averageValue = sum / values.length;
+        // console.log('average value: ', averageValue);
+
+        for (item of values) {
+            if (item > averageValue) {
+                console.log(item);
+            }
+        }
     </script>
 </body>
 </html>

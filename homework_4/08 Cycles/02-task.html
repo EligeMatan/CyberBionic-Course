@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2</title>
+    <title>Завдання 1(2)</title>
 </head>
 <body>
     <pre>
@@ -13,6 +13,16 @@
         коректне значення або поки не натисне клавішу ESC. Передбачати обробку нечислових значень необов'язково.
     </pre>
     <script>
+        while (1) {
+            let value = prompt('Введіть число більше 10: ');
+            console.log(value);
+
+            if (value == 10) {
+                alert(`Ви ввели значення 10, але у завданні не передбачена ця ситуація. \nНе треба так ...`);
+            } else if (value === null || Number(value) > 10) {
+                break;
+            }
+        }
         
     </script>
 </body>

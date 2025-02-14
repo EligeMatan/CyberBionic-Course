@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        Створіть масив і внесіть до нього 10 випадкових значень. Для створення випадкового значення використовуйте наступний код:
+        let randomValue = Math.floor(Math.random() * 101); // випадкове значення від 0 до 100 буде записано у змінну randomValue
+
+        Виведіть всі значення, внесені в масив, на екран за допомогою циклу.
+    </pre>
+    <script>
+        let arr = [];
+
+        for (let i = 0; i < 10; i ++) {
+            arr.push(Math.floor(Math.random() * 101));
+        }
+
+        // console.log(arr);
+
+        for(item of arr) {
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

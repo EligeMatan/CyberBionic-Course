@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 5</title>
+    <title>Завдання 1(5)</title>
 </head>
 <body>
     <pre>
@@ -28,7 +28,31 @@
         Сценарій: Правильно! Загадане значення 56. Ви вгадали з 4-ї спроби.
     </pre>
     <script>
-        
+        let isNewGame = true;                                   // флаг початку нової гри
+        let randomValue = Math.floor(Math.random() * 101);      // випадкове число від 0 до 100+1 (+1 щоб точно 100 захопити)
+        alert(`я загадав випадкове значення від 0 до 100`);
+
+        let attemptCount = 1;
+        while (isNewGame) {
+            let userValue = +prompt(`Введіть число від 0 до 100:`);
+
+            if (randomValue === userValue) {
+                alert(`Правильно! Загадане значення ${userValue}. Ви вгадали з ${attemptCount}-ї спроби.`);
+                isNewGame = confirm('Нова гра?');
+
+                if (isNewGame) {
+                    randomValue = Math.floor(Math.random() * 101);
+                    alert(`я загадав випадкове значення від 0 до 100`);
+                    attemptCount = 1;
+                }
+            } else if (randomValue < userValue) {
+                alert(`я загадав значення менше, ніж ${userValue}`);
+            } else if (randomValue > userValue) {
+                alert(`я загадав значення більше, ніж ${userValue}`);
+            }
+
+            attemptCount ++;
+        }
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 4</title>
+    <title>Завдання 1(4)</title>
 </head>
 <body>
     <pre>
@@ -12,7 +12,28 @@
         на екрані.
     </pre>
     <script>
-        
+        let value;
+        while (1) {
+            value = Math.trunc(+prompt('Введіть число:'));
+
+            if (!isNaN(value) && value !== null) break;
+        }
+
+        let sum = 0;
+
+        if (value > 0) {
+            for (let i = 0; i <= value; i ++) {
+                sum += i;
+            }
+
+        } else {
+            for (let i = value; i <= 0; i ++) {
+                sum += i;
+            }
+        }
+
+        alert (`Сума чисел від 0 до ${value} дорівнює:   ${sum}`);
+            
     </script>
 </body>
 </html>
