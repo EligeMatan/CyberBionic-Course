@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1</title>
+    <title>Завдання 5(1)</title>
 </head>
 <body>
     <pre>
@@ -14,13 +14,19 @@
     </pre>
     <script>
         let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+        console.log('old array:', cities);
 
         let userCity = prompt('Введіть назву міста');
+        console.log('removed item:', userCity);
 
-        let findIndex = cities.indexOf(userCity)
+        let findIndex = cities.indexOf(userCity);
         if (findIndex !== -1) {
-            cities.slice(findIndex, findIndex);
+            cities.splice(findIndex, 1);
+        } else {
+            console.warn('Такого міста немає у списку');
         }
+
+        console.log('new array:', cities);
     </script>
 </body>
 </html>

@@ -12,6 +12,14 @@
     </pre>
     <script>
         let values = [10, 20, -2, 6, 11, -10, 125, -3, 8, 0, 3];
+        console.log('old array: ', values);
+
+        for (let i = 0; i < values.length; i ++) {
+            if (values[i] < 0) {
+                values.splice(i, 1);
+            }
+        }
+        console.log('new array: ', values);
     </script>
 </body>
 </html>

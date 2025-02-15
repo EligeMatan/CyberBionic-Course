@@ -16,14 +16,14 @@
         // console.log(values);
         
         let sum = 0;
-        for (item of values) {
+        for (const item of values) {
             sum += item;
         }
 
         let averageValue = sum / values.length;
         // console.log('average value: ', averageValue);
 
-        for (item of values) {
+        for (const item of values) {
             if (item > averageValue) {
                 console.log(item);
             }

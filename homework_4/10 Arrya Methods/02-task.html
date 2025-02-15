@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2</title>
+    <title>Завдання 5(2)</title>
 </head>
 <body>
     <pre>
@@ -13,7 +13,25 @@
         Після того, як користувач ввів значення стоп, порахуйте суму всіх значень, які знаходяться в масиві.
     </pre>
     <script>
-        
+        let inputValue = prompt('Введіть значення. Для виходу введіть "stop".');
+        // console.log(inputValue);
+
+        let arr = [];
+        let sum = 0;
+
+        while (inputValue !== 'stop') {
+            if(Number(inputValue)) {
+                arr.push(Number(inputValue));
+                sum += Number(inputValue);
+            }
+
+            inputValue = prompt('Введіть ще значення. Для виходу введіть "stop".');
+            // console.log(inputValue);
+        }
+
+        console.log('array: ', arr);
+        console.log('sum: ', sum);
+
     </script>
 </body>
 </html>

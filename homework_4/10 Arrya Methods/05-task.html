@@ -27,10 +27,24 @@
         prices[2] = 12.50;  // Ручка кулькова синя
 
         let count = [];
-        count[0] = 2;   // Папір офісний А4, 80 г/м2, 500 л
-        count[1] = 10;  // Біндери для паперу 51 мм
-        count[2] = 10;  // Ручка кулькова синя
+        // count[0] = 2;   // Папір офісний А4, 80 г/м2, 500 л
+        // count[1] = 10;  // Біндери для паперу 51 мм
+        // count[2] = 10;  // Ручка кулькова синя
 
+        let total = 0;
+        for (let i = 0; i < 3; i ++) {
+            let value = +prompt(`Введіть кількість для *${names[i]}*`);
+            
+            if (value && !isNaN(value)) {
+                count.push(value);
+
+                console.log(`На *${names[i]}* витрачено:   ${value * prices[i]}`);
+                total += value * prices[i];
+            }   
+        }
+
+        console.log('------------------------');
+        console.log(`Всього витрачено:   ${total}`);
     </script>
 </body>
 
