@@ -32,7 +32,7 @@
         // count[2] = 10;  // Ручка кулькова синя
 
         let total = 0;
-        for (let i = 0; i < 3; i ++) {
+        for (let i = 0; i < 3; i ++) {                  // від Скорика Олександра: можна зробити код більш універсальним:  for (let i = 0; i < names.length; i++)
             let value = +prompt(`Введіть кількість для *${names[i]}*`);
             
             if (value && !isNaN(value)) {
