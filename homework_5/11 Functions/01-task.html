@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1 - 11 Functions - task 1</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        Створіть функцію min(a, b), яка повертає менше з числа а та b
+    </pre>
+    <script>
+        const min = (a, b) => {
+            return Math.min(a, b);
+        }
+
+        let a = Math.floor(Math.random() * 101);
+        let b = Math.floor(Math.random() * 101);
+
+        console.log(`З двох чисел ${a} і ${b} мінімальне:   ${min(a, b)}`);
+    </script>
+</body>
+</html>

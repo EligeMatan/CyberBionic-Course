@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        Створіть одну глобальну змінну з довільним значенням та дві функції. 
+        Покажіть, що глобальна змінна може використовуватися в цих двох функціях.
+    </pre>
+    <script>
+        let global = 10;
+        
+        const func1 = (a) => {
+            console.log('in *func1*: ');
+
+            global += 2;
+            console.log(`in *func1*:  global =  ${global}`);
+
+            return a * a;
+        };
+
+        const func2 = (a) => {
+            console.log('in *func2*: ');
+
+            global = func1(global);
+
+            console.log(`in *func2*:  global =  ${global}`);
+        }
+        
+
+        console.log(`Середнє значення з трьох чисел ${a} , ${b} і ${c} становить:   ${avg(a, b, c)}`);
+    </script>
+</body>
+</html>
