@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 5</title>
+    <title>Завдання 1 - 11 Functions - task 5</title>
 </head>
 <body>
     <pre>
@@ -12,7 +12,27 @@
         повторюваних значень у масиві немає.
     </pre>
     <script>
-        
+        /* за основу механізма генерації випадк.чисел візьмемо попередню задачу  */
+        const createRandIntArray = (min, max, length) => {
+            const correctMin = Math.ceil(min);
+            const correctMax = Math.floor(max);
+
+            /* масив на основі послідовності чисел довжиною length */
+            return Array.from({ length }, (value, index) => Math.floor(Math.random() * (correctMax - correctMin + 1) + correctMin));
+        }
+
+        const randArr = createRandIntArray(1, 20, 10);
+        console.log('randArr =', randArr);
+
+        const findDublicate = (arr) => {
+            let result = arr.filter((item, index, selfArray) => selfArray.indexOf(item) !== index && selfArray.lastIndexOf(item) === index);
+
+            return (result.length > 0) ? result : null;
+        }
+
+        const duplicates = findDublicate(randArr);
+        console.log('duplicates =', duplicates);
+
     </script>
 </body>
 </html>

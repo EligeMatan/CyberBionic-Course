@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 4</title>
+    <title>Завдання 1 - 11 Functions - task 4</title>
 </head>
 
 <body>
@@ -16,6 +16,13 @@
     </pre>
     <script>
         let throwCount = +prompt("Скільки разів ви хочете кинути шостигранний кубик");
+        
+        const  random = (min, max) => {
+            const correctMin = Math.ceil(min);
+            const correctMax = Math.floor(max);
+            
+            return Math.floor(Math.random() * (correctMax - correctMin + 1) + correctMin);
+        }
 
         for (let i = 0; i < throwCount; i++) {
             const result = random(1, 6);

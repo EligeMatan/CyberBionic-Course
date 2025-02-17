@@ -28,11 +28,13 @@
 
             global = func1(global);
 
-            console.log(`in *func2*:  global =  ${global}`);
+            return global * 3;
         }
         
 
-        console.log(`Середнє значення з трьох чисел ${a} , ${b} і ${c} становить:   ${avg(a, b, c)}`);
+        console.log(`global:   ${global}`);
+        console.log(`global після func2:   ${func2(global)}`);
+        
     </script>
 </body>
 </html>

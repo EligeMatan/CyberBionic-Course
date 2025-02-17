@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 4</title>
+    <title>Завдання 1 - 12 Functions - task 4</title>
 </head>
 
 <body>
@@ -14,31 +14,36 @@
     </pre>
     <script>
         let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
-        let oddValues = [];
-        let evenValues = [];
-        let oddValuesPosition = 0;
-        let evenValuesPosition = 0;
+        // let oddValues = [];
+        // let evenValues = [];
+        // let oddValuesPosition = 0;
+        // let evenValuesPosition = 0;
 
-        for (let value of values) {
-            if (value % 2 == 0) {
-                evenValues[evenValuesPosition] = value;
-                evenValuesPosition++;
-            }
-            else {
-                oddValues[oddValuesPosition] = value;
-                oddValuesPosition++;
-            }
-        }
+        const oddValues = values.filter((item) => item % 2 !== 0 )
+        const evenValues = values.filter((item) => item % 2 === 0 )
+
+        // for (let value of values) {
+        //     if (value % 2 == 0) {
+        //         evenValues[evenValuesPosition] = value;
+        //         evenValuesPosition++;
+        //     }
+        //     else {
+        //         oddValues[oddValuesPosition] = value;
+        //         oddValuesPosition++;
+        //     }
+        // }
 
         console.log("Непарні значення\n");
-        for (let oddVal of oddValues) {
-            console.log(oddVal);
-        }
+        // for (let oddVal of oddValues) {
+        //     console.log(oddVal);
+        // }
+        oddValues.forEach((item) => console.log(item) );
 
         console.log("Парні значення\n");
-        for (let evenVal of evenValues) {
-            console.log(evenVal);
-        }
+        // for (let evenVal of evenValues) {
+        //     console.log(evenVal);
+        // }
+        evenValues.forEach((item) => console.log(item) );
 
     </script>
 </body>

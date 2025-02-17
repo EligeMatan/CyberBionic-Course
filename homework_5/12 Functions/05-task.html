@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task X</title>
+    <title>Завдання 1 - 12 Functions - task 5</title>
 </head>
 <body>
     <pre>
@@ -12,7 +12,20 @@
         Використовуйте для вирішення рекурсію.
     </pre>
     <script>
-        
+        let value = +prompt('Введіть ціле додатнє число:');
+
+        const reverseValue = (val) => {
+            console.log(val);
+            if (val > 1) {
+                reverseValue(val - 1);
+            }
+        }
+
+        if (Number.isInteger(value) && value > 0) {
+            reverseValue(value);
+        } else {
+            console.log('Введене значення має бути додатнім цілим числом');
+        }
     </script>
 </body>
 </html>

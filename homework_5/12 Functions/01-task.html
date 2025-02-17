@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1</title>
+    <title>Завдання 1 - 12 Functions - task 1</title>
 </head>
 <body>
     <pre>
@@ -23,11 +23,13 @@
         prices[1] = 56;     // Біндери для паперу 51 мм
         prices[2] = 12.50;  // Ручка кулькова синя
 
+        let count = [];
+
         initCountArray();
         calculateSum();
 
         function initCountArray() {
-            let count = [];
+            // let count = [];
             for (let i = 0; i < names.length; i++) {
                 const productName = names[i];
                 let counttoBuy = +prompt("Вкажіть кількість для " + productName);
