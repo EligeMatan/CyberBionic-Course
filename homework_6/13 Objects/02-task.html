@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1 - 13 Objects - task 2</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        Створіть два об'єкти, використовуючи конструктор і літерал. Обидва об'єкти повинні містити властивості firstName
+        та lastName із довільними значеннями. Створіть функцію print, яка буде приймати як параметр об'єкт і виводити
+        властивості lastName і firstName отриманого об'єкта на екрані.
+    </pre>
+    <script>
+        let obj1 = {
+            firstName: 'Askania',
+            lastName: 'Nova'
+        }
+
+        let obj2 = new Object();
+        obj2.firstName = 'Sarjin';
+        obj2.lastName = 'Yar';
+
+        const print = (object) => {
+            console.log(`Об'єкт obj1:  firstName = ${object.firstName}  lastName = ${object.lastName}`)
+        }
+
+        print(obj1);
+        print(obj2);
+
+    </script>
+</body>
+</html>
