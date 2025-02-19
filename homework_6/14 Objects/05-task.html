@@ -511,13 +511,13 @@
 
             let maxCount = 0;
             for (const fruit in favoritedFruitCount) {
-                if (favoritedFruitCount[fruit]) {
+                if (favoritedFruitCount[fruit] > maxCount) {
                     maxCount = favoritedFruitCount[fruit];
                     result = fruit;
                 }
             }
 
-            console.log(result);
+            console.log(`${result}   (кількість згадувань: ${maxCount})`);
             // return result;
         }
 
