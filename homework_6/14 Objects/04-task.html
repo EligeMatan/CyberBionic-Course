@@ -20,10 +20,15 @@
                 firstName,
                 lastName,
 
-                print: () => {
-                    console.log("First Name: " + firstName);
-                    console.log("Last Name: " + lastName);
-                }
+                print: function() {
+                    console.log("First Name: " + this.firstName);
+                    console.log("Last Name: " + this.lastName);
+                },
+
+                // print2: () => {
+                //     console.log("First Name: " + this.firstName);
+                //     console.log("Last Name: " + this.lastName);
+                // }
             }
         }
 
@@ -45,8 +50,9 @@
         // print(obj1);
         // print(obj2);
 
-        let user1 = createObject('Ivan', 'Ivanov').print();
-        let user2 = createObject('Jhon', 'Doe').print();
+        let user1 = createObject('Ivan', 'Ivanov').print();    // правильно
+        // let user2 = createObject('Jhon', 'Doe').print2();      // неправильно, бо стрілочна ф-ція не має свого контексту, тому виведе undefined
+        
     </script>
 </body>
 </html>

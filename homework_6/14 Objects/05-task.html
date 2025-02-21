@@ -496,9 +496,29 @@
                 .forEach(user => console.log(user.company));
         }
 
-        function showMostFavoritedFruit()
-        {
+        function showMostFavoritedFruit() {
+            console.log("Найпопулярніший фрукт:");
             
+            let favoritedFruitCount = {};   // корсет: { fruit: '...', count: 0 }
+            let result = null;              // улюблений фрукт
+
+            users.forEach(item => {
+                let fruitName = item.favoriteFruit;
+
+                favoritedFruitCount[fruitName] = (favoritedFruitCount[fruitName] || 0) + 1;
+                // favoritedFruitCount[fruitName] = (favoritedFruitCount[fruitName]) ? favoritedFruitCount[fruitName] + 1 : 1;
+            })
+
+            let maxCount = 0;
+            for (const fruit in favoritedFruitCount) {
+                if (favoritedFruitCount[fruit] > maxCount) {
+                    maxCount = favoritedFruitCount[fruit];
+                    result = fruit;
+                }
+            }
+
+            console.log(`${result}   (кількість згадувань: ${maxCount})`);
+            // return result;
         }
 
         showAllEmails();

@@ -17,11 +17,22 @@
             firstName: "Ivan",
             lastName: "Ivanov",
 
-            // print: function (obj) {
+            /* метод нижче не працює: стрілочні функції не мають власного контексту this,
+                тому вони звертаються до контексту, в якому вони були створені (що в даному випадку є глобальним контекстом).
+                У цьому просто буде undefined. */
+            // print: () => {
+            //     console.log("First Name: " + this.firstName);
+            //     console.log("Last Name: " + this.lastName);
+            // }
+
+            // тому краще так:
+            // print: () => {
             //     console.log("First Name: " + obj1.firstName);
             //     console.log("Last Name: " + obj1.lastName);
             // }
-            print: () => {
+
+            // або так:
+            print: function () {
                 console.log("First Name: " + this.firstName);
                 console.log("Last Name: " + this.lastName);
             }
