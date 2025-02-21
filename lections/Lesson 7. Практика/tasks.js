@@ -93,7 +93,7 @@
     const arr1 = [2, 4, 6, 8];
     const arr2 = [2, 4, 6, 7, 8];
 
-    isOddExist = (arr) => {
+    const isOddExist = (arr) => {
         let result = false;
 
         arr.forEach(item => {
